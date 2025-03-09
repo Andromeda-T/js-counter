@@ -9,6 +9,7 @@ let cir_s = document.querySelector('#cir_s');
 let spn_s = document.querySelector('#spn_s');
 let goo_s = document.querySelector('#goo_s');
 let suc_s = document.querySelector('#suc_s');
+let persent = 'p100'
 
 // items 
 
@@ -24,20 +25,26 @@ btn_s.addEventListener('click', function () {
 
 btn_s.addEventListener('click', function () {
     let secound = parseInt(inp_s.value);
-    spn_s.textContent = secound
-    goo_s.classList.remove('hidden')
-    suc_s.classList.add('hidden')
+    let main = inp_s.value;
     inp_s.value = ''
-
+    spn_s.textContent = secound
+    cir_s.classList.add('p100')
+    suc_s.classList.add('hidden')
+    goo_s.classList.remove('hidden')
     let timer = setInterval(() => {
-        if (secound <= 1) {
+        cir_s.classList.remove('p100')
+        secound--
+        cir_s.classList.remove(`p${persent}`)
+        persent = Math.abs(Math.floor((((main - secound) / main) * 100) - 100))
+        if (persent <= 0) {
             clearInterval(timer)
             box_s.classList.remove('hidden');
             suc_s.classList.remove('hidden')
-            goo_s.classList.add('hidden')
             cir_s.classList.add('hidden')
+            goo_s.classList.add('hidden')
         }
-        secound--
+        console.log(persent)
+        cir_s.classList.add(`p${persent}`)
         spn_s.textContent = secound
 
     }, 1000);
