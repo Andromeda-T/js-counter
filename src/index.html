@@ -18,20 +18,20 @@
 
 <body>
 
-    <div class="container flex flex-col justify-center items-center mt-10 space-y-9">
-        <div class="flex flex-row-reverse mr-6">
+    <div class="m-auto flex flex-col justify-center items-center mt-10 space-y-9 ">
+        <div class="flex flex-row-reverse mr-6" id="box_s">
             <div class="flex flex-col">
                 <input class="border rounded-[.3rem] ml-3 px-17 py-2 text-center" type="text"
-                    placeholder="زمان خود را به ثانیه وارد کنید" id="input-s">
-                <span class="m-auto text-red-400 hidden" id="eror">لطفا یک عدد وارد کنید</span>
+                    placeholder="زمان خود را به ثانیه وارد کنید" id="inp_s">
+                <span class="m-auto text-red-400 hidden mt-3" id="err_s">لطفا یک عدد وارد کنید</span>
             </div>
             <div>
                 <button class="flex p-2 bg-amber-600 rounded-2xl text-white cursor-pointer hover:bg-amber-700"
-                    id="btn">شروع</button>
+                    id="btn_s">شروع</button>
             </div>
         </div>
-        <div class="c100 p90">
-            <span>250</span>
+        <div class="c100 p90 hidden" id="cir_s">
+            <span id="spn_s"></span>
             <div class="slice">
                 <div class="bar"></div>
                 <div class="fill"></div>
@@ -39,8 +39,8 @@
         </div>
         <div>
             <p>
-                <span class="text-red-400">درحال اجرا...</span>
-                <span class="text-green-400">شمارنده با موفقیت به پایان رسید</span>
+                <span id="goo_s" class="text-red-400 hidden">درحال اجرا...</span>
+                <span id="suc_s" class="text-green-400 hidden">شمارنده با موفقیت به پایان رسید</span>
             </p>
         </div>
     </div>
