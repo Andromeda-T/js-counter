@@ -1,17 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../src/main.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="circle.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet"
+        type="text/css" />
+    <style>
+        html {
+            font-family: Vazirmatn, sans-serif;
+        }
+    </style>
     <title>Document</title>
 </head>
+
 <body>
-    
-    <span class="text-amber-300">salam</span>
+
+    <div class="container flex flex-col justify-center items-center mt-10 space-y-9">
+        <div class="flex flex-row-reverse mr-6">
+            <div class="flex flex-col">
+                <input class="border rounded-[.3rem] ml-3 px-17 py-2 text-center" type="text"
+                    placeholder="زمان خود را به ثانیه وارد کنید" id="input-s">
+                <span class="m-auto text-red-400 hidden" id="eror">لطفا یک عدد وارد کنید</span>
+            </div>
+            <div>
+                <button class="flex p-2 bg-amber-600 rounded-2xl text-white cursor-pointer hover:bg-amber-700"
+                    id="btn">شروع</button>
+            </div>
+        </div>
+        <div class="c100 p90">
+            <span>250</span>
+            <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+            </div>
+        </div>
+        <div>
+            <p>
+                <span class="text-red-400">درحال اجرا...</span>
+                <span class="text-green-400">شمارنده با موفقیت به پایان رسید</span>
+            </p>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
-</html>
 
+</html>
